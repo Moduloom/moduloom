@@ -1,14 +1,21 @@
-<img src="frame/assets/frame.svg" width="52" alt="Moduloom 标志">
+<div align="center">
+  <img src="frame/assets/frame.svg" width="88" alt="Moduloom 标志">
+  <h1>Moduloom</h1>
+  <p>React 组件库的浏览器工作台。</p>
+  <p><a href="#运行示例">运行示例</a> &nbsp;&nbsp; <a href="frame/README.md">接入指南</a></p>
+</div>
 
-# Moduloom
+## 功能
 
-**React 组件库的浏览器工作台。**
+- 在独立预览或组合场景中运行组件。
+- 在参数面板修改属性，当场看到结果。
+- 对照深浅主题，复制组件参数和配置。
 
-把组件放进实际场景预览，实时调整参数、对比深浅主题，并导出验证过的配置。
+## 界面展示
 
-![Moduloom 工作台中的组件场景与参数面板](docs/preview.png)
+![组件场景与实时参数面板](docs/preview.png)
 
-## 试用
+## 运行示例
 
 需要 Node.js 22.18+ 和 pnpm 11。
 
@@ -19,13 +26,13 @@ pnpm install --frozen-lockfile
 pnpm demo
 ```
 
-打开 [本地工作台](http://127.0.0.1:4321/)。示例会加载一个可调参数的按钮，可以直接改文字或禁用状态。
+打开 [本地工作台](http://127.0.0.1:4321/)。示例里的按钮支持调整文字和禁用状态。
 
-## 接入自己的组件库
+接入自己的组件库时，在 `frame.config.ts` 注册组件清单和渲染器，再运行 `pnpm dev`。配置示例见 [接入指南](frame/README.md)。
 
-在 `frame.config.ts` 中注册组件清单和预览渲染器，然后运行 `pnpm dev`。配置和接口示例见 [接入指南](frame/README.md)。
+## 相关项目
 
-工作台使用 [Loom UI](https://github.com/Moduloom/loom-ui)。完整的产品界面预览可见 [BetterGI Web UI](https://github.com/Moduloom/bettergi-web-ui)。
+工作台使用 [Loom UI](https://github.com/Moduloom/loom-ui)。完整产品界面的预览示例见 [BetterGI Web UI](https://github.com/Moduloom/bettergi-web-ui)。
 
 ## 许可证
 

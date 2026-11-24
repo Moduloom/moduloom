@@ -17,4 +17,4 @@ pnpm dev
 
 打开 [127.0.0.1:4321](http://127.0.0.1:4321/)，通过 [frame.config.ts](frame.config.ts) 注册组件库，或者运行 pnpm demo 试用示例。
 
-[接入指南](frame/README.md) · [Loom UI](https://github.com/Moduloom/loom-ui) · [BetterGI UI](https://github.com/Moduloom/bettergi-ui) · [GPL v3](LICENSE)
+[接入指南](frame/README.md) · [Loom UI](https://github.com/Moduloom/loom-ui) · [BetterGI UI](https://github.com/Moduloom/bettergi-web-ui) · [GPL v3](LICENSE)

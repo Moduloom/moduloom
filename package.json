@@ -1,0 +1,33 @@
+{
+  "name": "moduloom-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.14.0",
+  "scripts": {
+    "dev": "tsx --conditions=loom-source frame/src/cli.ts dev",
+    "build": "pnpm --filter loom-ui build && node --experimental-strip-types frame/scripts/build-frame.ts",
+    "serve": "tsx frame/src/cli.ts serve",
+    "start": "tsx frame/src/cli.ts open",
+    "lookup": "tsx frame/src/cli.ts lookup",
+    "agents": "tsx frame/src/cli.ts agents",
+    "demo": "tsx --conditions=loom-source frame/src/cli.ts dev examples/frame.config.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.0",
+    "vite": "^8.0.0",
+    "tsx": "^4.21.0"
+  },
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22.18"
+  }
+}

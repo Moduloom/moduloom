@@ -1,0 +1,3 @@
+[submodule "loom-ui"]
+	path = webui
+	url = https://github.com/Moduloom/loom-ui.git

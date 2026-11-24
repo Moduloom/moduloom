@@ -1,0 +1,64 @@
+{
+  "name": "loom-frame",
+  "version": "0.1.0",
+  "description": "Pluggable browser component preview framework",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "loom": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/src/index.d.ts",
+      "loom-source": "./src/index.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./vite": {
+      "types": "./dist/types/src/vite.d.ts",
+      "import": "./dist/vite.mjs"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./app/src/client.ts"
+    },
+    "./ui": {
+      "types": "./dist/ui/types/index.d.ts",
+      "import": "./dist/ui/index.js"
+    },
+    "./ui/styles.css": {
+      "default": "./dist/ui/styles.css"
+    }
+  },
+  "files": [
+    "dist/*.mjs",
+    "dist/*.d.ts",
+    "dist/types",
+    "dist/ui",
+    "app",
+    "assets",
+    "AGENTS.md",
+    "README.md",
+    "src/index.ts"
+  ],
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^8.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.468.0",
+    "@radix-ui/react-tooltip": "^1.2.0"
+  },
+  "devDependencies": {
+    "loom-ui": "workspace:*"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts dev",
+    "build": "pnpm --filter loom-ui build && node --experimental-strip-types scripts/build-frame.ts",
+    "serve": "tsx src/cli.ts serve"
+  }
+}
